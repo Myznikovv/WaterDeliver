@@ -2,10 +2,12 @@ var cart = {}; //корзина
 var count=0;
 
 $.getJSON('goods.json', function (data) {
-    var goods = data; //все товары в массиве
+    let goods = data; //все товары в массиве
     $('.send-mail').on('click',sendEmail);
     checkCart();
     showCart(); //вывожу товары на страницу
+
+
 
     function showCart() {
         if ($.isEmptyObject(cart)) {
